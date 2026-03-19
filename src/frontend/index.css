@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Sharp geometric radii */
+    --radius: 0.25rem;
+    
+    /* Light mode: Pure white background with black text */
+    --background: 1 0 0; /* Pure white */
+    --foreground: 0.15 0 0; /* Near black */
+    
+    --card: 0.99 0 0; /* Off-white card */
+    --card-foreground: 0.15 0 0;
+    
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0 0;
+    
+    /* Primary: Bold crimson red */
+    --primary: 0.55 0.22 25; /* Rich crimson red */
+    --primary-foreground: 1 0 0; /* White text on red */
+    
+    /* Secondary: Light red tint */
+    --secondary: 0.96 0.03 25;
+    --secondary-foreground: 0.15 0 0;
+    
+    /* Muted: Subtle gray */
+    --muted: 0.95 0 0;
+    --muted-foreground: 0.50 0 0;
+    
+    /* Accent: Darker red for hover states */
+    --accent: 0.48 0.24 25;
+    --accent-foreground: 1 0 0;
+    
+    /* Destructive: Even more saturated red */
+    --destructive: 0.55 0.26 25;
+    --destructive-foreground: 1 0 0;
+    
+    /* Borders: Light gray */
+    --border: 0.90 0 0;
+    --input: 0.90 0 0;
+    --ring: 0.55 0.22 25; /* Red focus ring */
+    
+    /* Success: Muted green */
+    --success: 0.65 0.12 145;
+    --success-foreground: 1 0 0;
+    
+    /* Completed state: Desaturated */
+    --completed: 0.70 0.02 25;
+    --completed-foreground: 0.50 0 0;
+  }
+
+  .dark {
+    /* Dark mode: Deep charcoal with white text */
+    --background: 0.18 0 0; /* Deep charcoal */
+    --foreground: 0.97 0 0; /* Off-white */
+    
+    --card: 0.22 0 0; /* Slightly lighter charcoal */
+    --card-foreground: 0.97 0 0;
+    
+    --popover: 0.22 0 0;
+    --popover-foreground: 0.97 0 0;
+    
+    /* Primary: Bright red, slightly lighter for dark mode */
+    --primary: 0.60 0.24 25;
+    --primary-foreground: 0.97 0 0;
+    
+    --secondary: 0.28 0.04 25;
+    --secondary-foreground: 0.97 0 0;
+    
+    --muted: 0.30 0 0;
+    --muted-foreground: 0.65 0 0;
+    
+    --accent: 0.65 0.26 25;
+    --accent-foreground: 0.97 0 0;
+    
+    --destructive: 0.60 0.26 25;
+    --destructive-foreground: 0.97 0 0;
+    
+    --border: 0.35 0 0;
+    --input: 0.35 0 0;
+    --ring: 0.60 0.24 25;
+    
+    --success: 0.70 0.14 145;
+    --success-foreground: 0.97 0 0;
+    
+    --completed: 0.45 0.02 25;
+    --completed-foreground: 0.65 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
